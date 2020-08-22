@@ -24,7 +24,6 @@ func _on_EnemyDetector_body_entered(body: Node2D):
 
 func _on_StompDetector_area_entered(body: Node2D):
 	motion.y = JUMP_HEIGHT
-	move_and_slide(motion)
 
 #Controls/Movement/Abilities
 func _physics_process(_delta):

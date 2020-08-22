@@ -29,9 +29,9 @@ func _physics_process(delta):
 		direction = direction * -1
 		$RayCast2D.position.x *= -1
 
-func _on_StompArea2D_area_entered(area):
-	if area.is_in_group("Player"):
-		die()
+func _on_StompArea2D_area_entered(area: Node2D):
+		if area.is_in_group("Player"):
+			die()
 
 
 
