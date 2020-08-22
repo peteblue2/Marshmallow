@@ -35,10 +35,10 @@ window/stretch/aspect="expand"
 
 [layer_names]
 
-2d_physics/layer_1="Player"
-2d_physics/layer_2="Enemies"
-2d_physics/layer_3="Environment"
-2d_physics/layer_5="Bumper"
+2d_physics/layer_1="Environment"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
+2d_physics/layer_5="Stomp"
 
 [rendering]
 

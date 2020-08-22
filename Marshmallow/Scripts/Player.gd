@@ -14,11 +14,17 @@ var direction = 1
 func die():
 	queue_free()
 
-func _on_EnemyDetector_body_entered():
+func _on_EnemyDetector_body_entered(body: Node2D):
 	var bodies = $EnemyDetector.get_overlapping_bodies()
 	for body in bodies:
-		if body.name == "Enemy":
+		if body.is_in_group("Enemy"):
 			die()
+		else: 
+			pass 
+
+func _on_StompDetector_area_entered(body: Node2D):
+	motion.y = JUMP_HEIGHT
+	move_and_slide(motion)
 
 #Controls/Movement/Abilities
 func _physics_process(_delta):
@@ -54,6 +60,12 @@ func _physics_process(_delta):
 				motion.y = -550
 				motion.x = 550
 	motion = move_and_slide(motion, UP)
+
+
+
+
+
+
 
 
 
