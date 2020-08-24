@@ -35,7 +35,7 @@ position = Vector2( 600, 256 )
 level_scene = "res://Levels/Level2.tscn"
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 533.168, 25.4758 )
+position = Vector2( 259.168, 249.476 )
 
 [editable path="Player"]
 
