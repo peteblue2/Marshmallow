@@ -59,11 +59,15 @@ __meta__ = {
 position = Vector2( 16, 0 )
 enabled = true
 cast_to = Vector2( 1, 0 )
+collision_mask = 2
+collide_with_areas = true
 
 [node name="LeftWallDectect" type="RayCast2D" parent="."]
 position = Vector2( -16, 0 )
 enabled = true
 cast_to = Vector2( -1, 0 )
+collision_mask = 2
+collide_with_areas = true
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 visible = false

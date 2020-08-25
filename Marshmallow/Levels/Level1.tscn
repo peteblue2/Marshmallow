@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Autotile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
+
+[node name="World" type="Node"]
+__meta__ = {
+"_edit_vertical_guides_": [ 704.0, 704.0 ]
+}
+
+[node name="Autotile" parent="." instance=ExtResource( 2 )]
+cell_quadrant_size = 1
+cell_tile_origin = 1
+tile_data = PoolIntArray( 196622, 0, 0, 196623, 0, 2, 262158, 0, 65536, 262159, 0, 65538, 327684, 0, 327680, 327685, 0, 327681, 327686, 0, 327681, 327687, 0, 327681, 327688, 0, 327682, 327694, 0, 65536, 327695, 0, 65538, 393230, 0, 65536, 393231, 0, 65538, 458766, 0, 65536, 458767, 0, 65538, 524302, 0, 65536, 524303, 0, 65538, 589824, 0, 0, 589825, 0, 1, 589826, 0, 1, 589827, 0, 1, 589828, 0, 1, 589829, 0, 1, 589830, 0, 1, 589831, 0, 1, 589832, 0, 1, 589833, 0, 1, 589834, 0, 1, 589835, 0, 1, 589836, 0, 1, 589837, 0, 1, 589838, 0, 327687, 589839, 0, 327686, 589840, 0, 1, 589841, 0, 1, 589842, 0, 1, 589843, 0, 2, 655360, 0, 131072, 655361, 0, 131073, 655362, 0, 131073, 655363, 0, 131073, 655364, 0, 131073, 655365, 0, 131073, 655366, 0, 131073, 655367, 0, 131073, 655368, 0, 131073, 655369, 0, 131073, 655370, 0, 131073, 655371, 0, 131073, 655372, 0, 131073, 655373, 0, 131073, 655374, 0, 131073, 655375, 0, 131073, 655376, 0, 131073, 655377, 0, 131073, 655378, 0, 131073, 655379, 0, 131074 )
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 48, 272 )
+
+[node name="Camera2D" parent="Player" index="1"]
+limit_right = 704
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 616, 256 )
+level_scene = "res://Levels/Level2.tscn"
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 344, 272 )
+
+[editable path="Player"]
+
+[editable path="Portal"]

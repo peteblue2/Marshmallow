@@ -60,7 +60,7 @@ func _physics_process(_delta):
 			motion.y = JUMP_HEIGHT
 	# Wall Jump
 	if is_on_wall():
-		print("gae")
+		print("on wall")
 		if Input.is_action_just_pressed("ui_up"):
 			
 			if $RightWallDetect.is_colliding():
